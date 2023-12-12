@@ -6,6 +6,6 @@ export class ArrayBufferConverter {
   }
 
   toString() {
-    return JSON.stringify(this.load()); 
+    return new TextDecoder().decode(this.load());
   }
 }
