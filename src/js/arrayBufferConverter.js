@@ -6,6 +6,6 @@ export class ArrayBufferConverter {
   }
 
   toString() {
-    return new TextDecoder().decode(this.load());
+    return String.fromCharCode.apply(null, new Uint16Array(this.load()));
   }
 }
